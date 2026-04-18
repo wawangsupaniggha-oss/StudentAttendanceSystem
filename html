@@ -1,0 +1,40 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="StudentAttendanceSystem.Default" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Attendance System</title>
+</head>
+<body>
+<form id="form1" runat="server">
+
+<h2>Attendance System</h2>
+
+<!-- SELECT STUDENT -->
+Student:
+<asp:DropDownList ID="ddlStudents" runat="server"></asp:DropDownList>
+<br /><br />
+
+<asp:Button ID="btnMark" runat="server" Text="Mark Attendance" OnClick="btnMark_Click" />
+<br /><br />
+
+<!-- ADD STUDENT -->
+<h3>Add Student</h3>
+<asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox><br />
+<asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox><br />
+<asp:TextBox ID="txtCourse" runat="server" placeholder="Course"></asp:TextBox><br />
+<asp:Button ID="btnAddStudent" runat="server" Text="Add Student" OnClick="btnAddStudent_Click" />
+<br /><br />
+
+<!-- SEARCH -->
+Search:
+<asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+<br /><br />
+
+<!-- TABLE -->
+<asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
+</form>
+</body>
+</html>
